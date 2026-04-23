@@ -450,7 +450,7 @@ img { display: block; max-width: 100%; height: auto; }
 }
 .step-circle {
     width: 60px; height: 60px; border-radius: 50%; background: #fff;
-    border: 1px solid #AFC3AF; display: flex; align-items: center; justify-content: center;
+    border: 1px solid #E7A2BC; display: flex; align-items: center; justify-content: center;
     font-family: var(--serif); font-size: 22px; font-weight: 600; color: var(--sage);
     margin-bottom: 18px; box-shadow: 0 4px 12px rgba(0,0,0,0.06);
 }
@@ -1727,8 +1727,22 @@ img { display: block; max-width: 100%; height: auto; }
     .btn-sage { width: 100%; text-align: center; }
 
     /* Timeline */
-    .timeline { flex-direction: column; align-items: center; gap: 28px; }
-    .timeline-step { max-width: 280px; }
+    .timeline {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 22px 16px;
+        align-items: stretch;
+        justify-items: center;
+    }
+    .timeline-step {
+        max-width: none;
+        width: 100%;
+    }
+    .timeline-step:last-child {
+        grid-column: 1 / -1;
+        max-width: 260px;
+        margin: 0 auto;
+    }
 
     /* Founder */
     .founder-content { padding: 36px 20px; }
