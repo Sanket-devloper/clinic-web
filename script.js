@@ -144,6 +144,136 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     // =============================================
+    // Testimonials Mobile Sliders (Reviews + Videos)
+    // =============================================
+    const reviewCardsRow = document.querySelector('#testimonials .review-cards-row');
+    const videoTopRow = document.querySelector('#testimonials .video-testimonials-top');
+    const videoBottomRow = document.querySelector('#testimonials .video-testimonials-bottom');
+
+    const setupMobileHorizontalSlider = (row, config = {}) => {
+        if (!row) return;
+
+        let autoSlideTimer = null;
+        const cards = row.querySelectorAll(config.cardSelector || '.review-card, .video-card');
+        const isMobileViewport = () => window.matchMedia('(max-width: 900px)').matches;
+        const gap = config.gap || 14;
+
+        const applyMobileLayout = () => {
+            if (isMobileViewport()) {
+                row.style.display = 'grid';
+                row.style.gridAutoFlow = 'column';
+                row.style.gridAutoColumns = config.autoColumns || 'minmax(250px, 84vw)';
+                row.style.gap = `${gap}px`;
+                row.style.overflowX = 'auto';
+                row.style.overscrollBehaviorX = 'contain';
+                row.style.scrollSnapType = 'x mandatory';
+                row.style.scrollBehavior = 'smooth';
+                row.style.padding = '4px 2px 12px';
+                row.style.maxWidth = '100%';
+                row.style.margin = '0';
+                row.style.webkitOverflowScrolling = 'touch';
+
+                cards.forEach((card) => {
+                    card.style.scrollSnapAlign = 'start';
+                    card.style.minWidth = config.minWidth || '250px';
+                    card.style.maxWidth = config.maxWidth || '340px';
+                    card.style.width = '100%';
+
+                    if (config.type === 'review') {
+                        card.style.padding = '20px';
+                        card.style.minHeight = '0';
+                    }
+
+                    if (config.type === 'video') {
+                        const thumbnail = card.querySelector('.video-thumbnail');
+                        if (thumbnail) thumbnail.style.height = config.videoHeight || '200px';
+                    }
+                });
+            } else {
+                row.removeAttribute('style');
+                cards.forEach((card) => {
+                    card.removeAttribute('style');
+
+                    if (config.type === 'video') {
+                        const thumbnail = card.querySelector('.video-thumbnail');
+                        if (thumbnail) thumbnail.removeAttribute('style');
+                    }
+                });
+            }
+        };
+
+        const startAutoSlide = () => {
+            if (!isMobileViewport() || autoSlideTimer) return;
+
+            autoSlideTimer = setInterval(() => {
+                const firstCard = row.querySelector(config.cardSelector || '.review-card, .video-card');
+                if (!firstCard) return;
+
+                const step = firstCard.getBoundingClientRect().width + gap;
+                const maxScrollLeft = row.scrollWidth - row.clientWidth;
+
+                if (row.scrollLeft + step >= maxScrollLeft - 4) {
+                    row.scrollTo({ left: 0, behavior: 'smooth' });
+                } else {
+                    row.scrollBy({ left: step, behavior: 'smooth' });
+                }
+            }, config.interval || 3000);
+        };
+
+        const stopAutoSlide = () => {
+            if (!autoSlideTimer) return;
+            clearInterval(autoSlideTimer);
+            autoSlideTimer = null;
+        };
+
+        row.addEventListener('touchstart', stopAutoSlide, { passive: true });
+        row.addEventListener('mouseenter', stopAutoSlide);
+        row.addEventListener('mouseleave', startAutoSlide);
+
+        window.addEventListener('resize', () => {
+            applyMobileLayout();
+            stopAutoSlide();
+            startAutoSlide();
+        });
+
+        applyMobileLayout();
+        startAutoSlide();
+    };
+
+    setupMobileHorizontalSlider(reviewCardsRow, {
+        type: 'review',
+        cardSelector: '.review-card',
+        autoColumns: 'minmax(250px, 84vw)',
+        minWidth: '250px',
+        maxWidth: '340px',
+        gap: 14,
+        interval: 3200
+    });
+
+    setupMobileHorizontalSlider(videoTopRow, {
+        type: 'video',
+        cardSelector: '.video-card',
+        autoColumns: 'minmax(260px, 86vw)',
+        minWidth: '260px',
+        maxWidth: '360px',
+        videoHeight: '200px',
+        gap: 14,
+        interval: 3400
+    });
+
+    setupMobileHorizontalSlider(videoBottomRow, {
+        type: 'video',
+        cardSelector: '.video-card',
+        autoColumns: 'minmax(260px, 86vw)',
+        minWidth: '260px',
+        maxWidth: '360px',
+        videoHeight: '200px',
+        gap: 14,
+        interval: 3400
+    });
+
+
+    // =============================================
     // Floating Contact Buttons
     // =============================================
     const floatingButtons = document.getElementById('floating-contact-buttons');
