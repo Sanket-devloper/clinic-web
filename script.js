@@ -40,8 +40,68 @@ document.addEventListener('DOMContentLoaded', () => {
     const homeProgramsGrid = document.querySelector('#programs .programs-grid');
     if (homeProgramsGrid) {
         let autoSlideTimer = null;
+        const homeProgramCards = homeProgramsGrid.querySelectorAll('.program-card');
 
-        const isMobileViewport = () => window.matchMedia('(max-width: 768px)').matches;
+        const isMobileViewport = () => window.matchMedia('(max-width: 900px)').matches;
+
+        const applyProgramsMobileLayout = () => {
+            if (isMobileViewport()) {
+                homeProgramsGrid.style.display = 'grid';
+                homeProgramsGrid.style.gridAutoFlow = 'column';
+                homeProgramsGrid.style.gridAutoColumns = 'minmax(250px, 82vw)';
+                homeProgramsGrid.style.gap = '14px';
+                homeProgramsGrid.style.overflowX = 'auto';
+                homeProgramsGrid.style.overscrollBehaviorX = 'contain';
+                homeProgramsGrid.style.scrollSnapType = 'x mandatory';
+                homeProgramsGrid.style.scrollBehavior = 'smooth';
+                homeProgramsGrid.style.padding = '4px 2px 12px';
+                homeProgramsGrid.style.webkitOverflowScrolling = 'touch';
+
+                homeProgramCards.forEach((card) => {
+                    card.style.scrollSnapAlign = 'start';
+                    card.style.borderRadius = '18px';
+                    card.style.minWidth = '250px';
+                    card.style.maxWidth = '320px';
+
+                    const image = card.querySelector('.card-image');
+                    const body = card.querySelector('.card-body');
+                    const title = card.querySelector('.card-title');
+                    const desc = card.querySelector('.card-desc');
+                    const cta = card.querySelector('.card-cta');
+
+                    if (image) image.style.height = '180px';
+                    if (body) body.style.padding = '18px';
+                    if (title) {
+                        title.style.fontSize = '24px';
+                        title.style.marginBottom = '10px';
+                    }
+                    if (desc) {
+                        desc.style.fontSize = '14px';
+                        desc.style.lineHeight = '1.65';
+                        desc.style.minHeight = '0';
+                        desc.style.marginBottom = '14px';
+                    }
+                    if (cta) cta.style.fontSize = '15px';
+                });
+            } else {
+                homeProgramsGrid.removeAttribute('style');
+                homeProgramCards.forEach((card) => {
+                    card.removeAttribute('style');
+
+                    const image = card.querySelector('.card-image');
+                    const body = card.querySelector('.card-body');
+                    const title = card.querySelector('.card-title');
+                    const desc = card.querySelector('.card-desc');
+                    const cta = card.querySelector('.card-cta');
+
+                    if (image) image.removeAttribute('style');
+                    if (body) body.removeAttribute('style');
+                    if (title) title.removeAttribute('style');
+                    if (desc) desc.removeAttribute('style');
+                    if (cta) cta.removeAttribute('style');
+                });
+            }
+        };
 
         const startProgramsAutoSlide = () => {
             if (!isMobileViewport() || autoSlideTimer) return;
@@ -73,10 +133,12 @@ document.addEventListener('DOMContentLoaded', () => {
         homeProgramsGrid.addEventListener('mouseleave', startProgramsAutoSlide);
 
         window.addEventListener('resize', () => {
+            applyProgramsMobileLayout();
             stopProgramsAutoSlide();
             startProgramsAutoSlide();
         });
 
+        applyProgramsMobileLayout();
         startProgramsAutoSlide();
     }
 
