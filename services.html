@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services — Dr. Prerna Golekar Gopale | Clinical Nutritionist</title>
+    <meta name="description" content="Explore our comprehensive diet programs — Weight Loss, PCOD, Thyroid, Diabetes Reversal, Pregnancy, Kids Diet and more by Dr. Prerna Golekar Gopale.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- ======================== HEADER ======================== -->
+<div class="announcement-bar" id="announcement-bar">
+    <p>🌿 Personalized Diet Plans for Weight Loss, PCOD, Thyroid, Diabetes & More — <a href="contact.html">Book Consultation →</a></p>
+</div>
+
+<header class="main-navbar" id="main-navbar">
+    <div class="navbar-inner">
+        <div class="nav-left">
+            <a href="index.html" class="nav-logo">
+                <svg class="logo-icon" viewBox="0 0 40 40" width="40" height="40">
+                    <circle cx="20" cy="20" r="18" fill="#7E9B7A" opacity="0.15"/>
+                    <text x="20" y="26" text-anchor="middle" fill="#7E9B7A" font-family="Cormorant Garamond, serif" font-size="22" font-weight="600">P</text>
+                </svg>
+                <span class="logo-text">Dr. Prerna</span>
+            </a>
+        </div>
+        <nav class="nav-center" id="nav-center">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="about.html" class="nav-link">About Us</a>
+            <div class="nav-dropdown">
+                <a href="services.html" class="nav-link active">Our Services <span class="dropdown-arrow">▾</span></a>
+                <div class="dropdown-menu">
+                    <a href="#weight-loss">Weight Loss Program</a>
+                    <a href="#pcod-thyroid">PCOD / Thyroid Diet</a>
+                    <a href="#diabetes">Diabetes Reversal</a>
+                    <a href="#pregnancy">Pregnancy / ANC Plans</a>
+                    <a href="#kids">Kids & Toddler Diet</a>
+                </div>
+            </div>
+            <a href="gallery.html" class="nav-link">Gallery</a>
+            <a href="contact.html" class="nav-link">Contact Us</a>
+        </nav>
+        <div class="nav-right">
+            <a href="contact.html" class="nav-cta">Book Consultation</a>
+        </div>
+        <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </div>
+    <div class="mobile-menu" id="mobile-menu">
+        <a href="index.html" class="mobile-link">Home</a>
+        <a href="about.html" class="mobile-link">About Us</a>
+        <a href="services.html" class="mobile-link">Our Services</a>
+        <a href="gallery.html" class="mobile-link">Gallery</a>
+        <a href="contact.html" class="mobile-link">Contact Us</a>
+        <a href="contact.html" class="nav-cta mobile-cta">Book Consultation</a>
+    </div>
+</header>
+
+
+<!-- ======================== PAGE HERO ======================== -->
+<section class="page-hero services-hero" id="page-hero">
+    <div class="page-hero-inner">
+        <div class="page-hero-content">
+            <span class="eyebrow">OUR SERVICES</span>
+            <h1 class="page-hero-heading">Comprehensive diet <span class="green italic">solutions</span> for every need</h1>
+            <p class="page-hero-desc">From weight management to chronic disease reversal — Dr. Prerna offers evidence-based, personalized nutrition programs tailored to your unique health journey.</p>
+            <a href="contact.html" class="btn-sage">Book Consultation →</a>
+        </div>
+        <div class="page-hero-image">
+            <img src="images/nutrition-desk.png" alt="Nutrition consultation services" loading="lazy">
+        </div>
+    </div>
+</section>
+
+
+<!-- ======================== SERVICES LAYOUT ======================== -->
+<section class="services-page" id="services">
+    <div class="container">
+        <div class="services-layout">
+
+            <!-- SIDEBAR — Service Navigation -->
+            <aside class="services-sidebar" id="services-sidebar">
+                <h3 class="sidebar-title">Our Treatments</h3>
+                <nav class="sidebar-nav">
+                    <a href="#weight-loss" class="sidebar-link active" data-target="weight-loss">
+                        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="#7E9B7A" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v8M9 11l3-3 3 3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        Weight Loss
+                    </a>
+                    <a href="#weight-gain" class="sidebar-link" data-target="weight-gain">
+                        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="#7E9B7A" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 14h8M12 10v8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        Weight Gain
+                    </a>
+                    <a href="#pcod-thyroid" class="sidebar-link" data-target="pcod-thyroid">
+                        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="#7E9B7A" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 7c-2 0-3 1-3 3s2 2 3 2 3 0 3 2-1 3-3 3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        PCOD & Thyroid
+                    </a>
+                    <a href="#diabetes" class="sidebar-link" data-target="diabetes">
+                        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="#7E9B7A" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v4l3 2M8 15h8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        Diabetes Reversal
+                    </a>
+                    <a href="#infertility" class="sidebar-link" data-target="infertility">
+                        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="#7E9B7A" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M10 10a2 2 0 014 0c0 3-2 4-2 7h0c0-3-2-4-2-7z" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        Infertility
+                    </a>
+                    <a href="#cardiac" class="sidebar-link" data-target="cardiac">
+                        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="#7E9B7A" stroke-width="2"><path d="M12 19s-7-4-7-9a4 4 0 017-2.5A4 4 0 0119 10c0 5-7 9-7 9z" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        Cardiac Disorder
+                    </a>
+                    <a href="#hypertension" class="sidebar-link" data-target="hypertension">
+                        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="#7E9B7A" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M7 12h2l1.5-4 3 8 1.5-4h2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        Hypertension
+                    </a>
+                    <a href="#detox" class="sidebar-link" data-target="detox">
+                        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="#7E9B7A" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 7v5M10 9c0 4 2 7 2 7s2-3 2-7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        Detox Diet
+                    </a>
+                    <a href="#lifestyle" class="sidebar-link" data-target="lifestyle">
+                        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="#7E9B7A" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 16c1-2 2-3 4-3s3 1 4 3M12 7v3M10 8h4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        Lifestyle Disorder
+                    </a>
+                    <a href="#kids" class="sidebar-link" data-target="kids">
+                        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="#7E9B7A" stroke-width="2"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="10" r="2.5"/><path d="M8 17c0-2 2-4 4-4s4 2 4 4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        Kids & Toddler
+                    </a>
+                    <a href="#pregnancy" class="sidebar-link" data-target="pregnancy">
+                        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="#7E9B7A" stroke-width="2"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="8" r="1.5"/><path d="M11 11c0 0-1 2-1 4s1 3 2 3 2-1 2-3-1-4-1-4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        Pregnancy / ANC
+                    </a>
+                </nav>
+            </aside>
+
+
+            <!-- MAIN CONTENT — Service Details -->
+            <div class="services-content">
+
+                <!-- Weight Loss -->
+                <article class="service-detail" id="weight-loss">
+                    <div class="service-detail-header">
+                        <h2 class="service-detail-title">Weight Loss Program</h2>
+                        <div class="service-badge">Most Popular</div>
+                    </div>
+                    <div class="service-detail-img">
+                        <img src="images/woman-walking.png" alt="Weight Loss Program" loading="lazy">
+                    </div>
+                    <div class="service-detail-body">
+                        <p class="service-intro">Our Weight Loss program is designed using evidence-based nutrition science to help you shed excess weight safely and sustainably. Dr. Prerna creates customized calorie-deficit plans based on your TDEE, BMI, and lifestyle.</p>
+                        <h3>What Makes Our Program Different?</h3>
+                        <p>Unlike crash diets that lead to rebound weight gain, our approach focuses on metabolic correction and sustainable eating habits. We don't believe in starvation — we believe in eating right.</p>
+                        <div class="service-features">
+                            <div class="service-feature">
+                                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#7E9B7A" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 12l3 3 5-5"/></svg>
+                                <span>Personalized calorie-deficit meal plans</span>
+                            </div>
+                            <div class="service-feature">
+                                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#7E9B7A" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 12l3 3 5-5"/></svg>
+                                <span>TDEE & BMI based calculations</span>
+                            </div>
+                            <div class="service-feature">
+                                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#7E9B7A" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 12l3 3 5-5"/></svg>
+                                <span>Weekly tracking & plan adjustments</span>
+                            </div>
+                            <div class="service-feature">
+                                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#7E9B7A" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 12l3 3 5-5"/></svg>
+                                <span>Exercise & meditation guidance</span>
+                            </div>
+                            <div class="service-feature">
+                                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#7E9B7A" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 12l3 3 5-5"/></svg>
+                                <span>Maintenance plan after reaching goal</span>
+                            </div>
+                        </div>
+                        <h3>Expected Results</h3>
+                        <p>Most clients experience a minimum of <strong>1 kg weight loss per week</strong>, depending on metabolic rate, lifestyle, and compliance. Our holistic approach ensures you maintain results long-term.</p>
+                        <a href="contact.html" class="btn-sage">Get Started →</a>
+                    </div>
+                </article>
+
+                <!-- Weight Gain -->
+                <article class="service-detail" id="weight-gain">
+                    <div class="service-detail-header">
+                        <h2 class="service-detail-title">Weight Gain Program</h2>
+                    </div>
+                    <div class="service-detail-body">
+                        <p class="service-intro">Struggling to gain weight healthily? Our Weight Gain program focuses on building lean muscle mass through nutrient-dense caloric surplus plans designed specifically for your body type and metabolism.</p>
+                        <h3>Our Approach to Healthy Weight Gain</h3>
+                        <p>We don't just add empty calories. Our plans are rich in proteins, complex carbohydrates, and healthy fats that promote muscle growth and overall strength without compromising health.</p>
+                        <div class="service-features">
+                            <div class="service-feature">
+                                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#7E9B7A" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 12l3 3 5-5"/></svg>
+                                <span>Caloric surplus plans with quality nutrition</span>
+                            </div>
+                            <div class="service-feature">
+                                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#7E9B7A" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 12l3 3 5-5"/></svg>
+                                <span>Protein-rich meal planning</span>
+                            </div>
+                            <div class="service-feature">
+                                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#7E9B7A" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 12l3 3 5-5"/></svg>
+                                <span>Strength training guidance</span>
+                            </div>
+                            <div class="service-feature">
+                                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#7E9B7A" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 12l3 3 5-5"/></svg>
+                                <span>Regular progress monitoring</span>
+                            </div>
+                        </div>
+                        <a href="contact.html" class="btn-sage">Get Started →</a>
+                    </div>
+                </article>
+
+                <!-- PCOD & Thyroid -->
+                <article class="service-detail" id="pcod-thyroid">
+                    <div class="service-detail-header">
+                        <h2 class="service-detail-title">PCOD & Thyroid Diet</h2>
+                        <div class="service-badge">Specialized</div>
+                    </div>
+                    <div class="service-detail-img">
+                        <img src="images/pregnant-woman.png" alt="PCOD & Thyroid Diet" loading="lazy">
+                    </div>
+                    <div class="service-detail-body">
+                        <p class="service-intro">Hormonal imbalances like PCOD and thyroid disorders require specialized dietary interventions. Dr. Prerna's targeted nutrition plans help regulate hormones, reduce inflammation, and restore metabolic balance naturally.</p>
+                        <h3>PCOD Diet Management</h3>
+                        <p>Polycystic Ovarian Disease requires careful management of insulin resistance and hormonal balance. Our diet plans focus on low-glycemic foods, anti-inflammatory ingredients, and nutrient-dense meals that help manage symptoms effectively.</p>
+                        <h3>Thyroid Diet Management</h3>
+                        <p>Whether hypothyroid or hyperthyroid, the right nutrition is crucial. We design plans that support thyroid function through selenium-rich foods, iodine balance, and foods that support metabolic rate.</p>
+                        <div class="service-features">
+                            <div class="service-feature">
+                                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#7E9B7A" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 12l3 3 5-5"/></svg>
+                                <span>Insulin resistance management</span>
+                            </div>
+                            <div class="service-feature">
+                                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#7E9B7A" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 12l3 3 5-5"/></svg>
+                                <span>Anti-inflammatory nutrition</span>
+                            </div>
+                            <div class="service-feature">
+                                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#7E9B7A" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 12l3 3 5-5"/></svg>
+                                <span>Hormonal balance through food</span>
+                            </div>
+                            <div class="service-feature">
+                                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#7E9B7A" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 12l3 3 5-5"/></svg>
+                                <span>Low-glycemic meal planning</span>
+                            </div>
+                            <div class="service-feature">
+                                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#7E9B7A" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 12l3 3 5-5"/></svg>
+                                <span>Thyroid-supportive nutrients</span>
+                            </div>
+                        </div>
+                        <a href="contact.html" class="btn-sage">Get Started →</a>
+                    </div>
+                </article>
+
+                <!-- Diabetes Reversal -->
+                <article class="service-detail" id="diabetes">
+                    <div class="service-detail-header">
+                        <h2 class="service-detail-title">Diabetes Reversal Program</h2>
+                        <div class="service-badge">Clinical</div>
+                    </div>
+                    <div class="service-detail-img">
+                        <img src="images/nutrition-desk.png" alt="Diabetes Reversal" loading="lazy">
+                    </div>
+                    <div class="service-detail-body">
+                        <p class="service-intro">Our Diabetes Reversal program uses strategic nutrition and lifestyle modifications to help manage and potentially reverse Type 2 diabetes. A clinically backed approach that has helped hundreds of clients improve their blood sugar levels naturally.</p>
+                        <h3>How We Approach Diabetes Management</h3>
+                        <p>We focus on controlling glycemic index, timing meals correctly, managing portion sizes, and incorporating foods that naturally support insulin sensitivity. Combined with exercise guidance, our program delivers measurable results.</p>
+                        <div class="service-features">
+                            <div class="service-feature">
+                                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#7E9B7A" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 12l3 3 5-5"/></svg>
+                                <span>Glycemic index management</span>
+                            </div>
+                            <div class="service-feature">
+                                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#7E9B7A" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 12l3 3 5-5"/></svg>
+                                <span>Meal timing and portion control</span>
+                            </div>
+                            <div class="service-feature">
+                                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#7E9B7A" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 12l3 3 5-5"/></svg>
+                                <span>Insulin sensitivity optimization</span>
+                            </div>
+                            <div class="service-feature">
+                                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#7E9B7A" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 12l3 3 5-5"/></svg>
+                                <span>HbA1c & blood sugar monitoring</span>
+                            </div>
+                        </div>
+                        <a href="contact.html" class="btn-sage">Get Started →</a>
+                    </div>
+                </article>
+
+                <!-- Infertility -->
+                <article class="service-detail" id="infertility">
+                    <div class="service-detail-header">
+                        <h2 class="service-detail-title">Infertility Diet</h2>
+                    </div>
+                    <div class="service-detail-body">
+                        <p class="service-intro">Nutrition plays a vital role in fertility. Our specialized diet plans are designed to support reproductive health, improve egg and sperm quality, and create an optimal hormonal environment for conception.</p>
+                        <h3>Nutritional Support for Fertility</h3>
+                        <p>We focus on fertility-boosting nutrients like folate, zinc, omega-3 fatty acids, and antioxidants, while eliminating foods that may disrupt hormonal balance. Both partners receive guidance to maximize chances of conception.</p>
+                        <div class="service-features">
+                            <div class="service-feature">
+                                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#7E9B7A" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 12l3 3 5-5"/></svg>
+                                <span>Fertility-boosting nutrition plans</span>
+                            </div>
+                            <div class="service-feature">
+                                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#7E9B7A" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 12l3 3 5-5"/></svg>
+                                <span>Hormonal balance optimization</span>
+                            </div>
+                            <div class="service-feature">
+                                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#7E9B7A" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 12l3 3 5-5"/></svg>
+                                <span>Antioxidant-rich meal planning</span>
+                            </div>
+                            <div class="service-feature">
+                                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#7E9B7A" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 12l3 3 5-5"/></svg>
+                                <span>Couples nutrition counseling</span>
+                            </div>
+                        </div>
+                        <a href="contact.html" class="btn-sage">Get Started →</a>
+                    </div>
+                </article>
+
+                <!-- Cardiac Disorder -->
+                <article class="service-detail" id="cardiac">
+                    <div class="service-detail-header">
+                        <h2 class="service-detail-title">Cardiac Disorder Diet</h2>
+                    </div>
+                    <div class="service-detail-body">
+                        <p class="service-intro">Heart health starts with what you eat. Our cardiac diet programs are designed to manage cholesterol, reduce inflammation, and promote cardiovascular wellness through carefully planned nutrition.</p>
+                        <div class="service-features">
+                            <div class="service-feature">
+                                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#7E9B7A" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 12l3 3 5-5"/></svg>
+                                <span>Heart-healthy meal planning</span>
+                            </div>
+                            <div class="service-feature">
+                                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#7E9B7A" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 12l3 3 5-5"/></svg>
+                                <span>Cholesterol management through diet</span>
+                            </div>
+                            <div class="service-feature">
+                                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#7E9B7A" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 12l3 3 5-5"/></svg>
+                                <span>Sodium-controlled nutrition</span>
+                            </div>
+                            <div class="service-feature">
+                                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#7E9B7A" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 12l3 3 5-5"/></svg>
+                                <span>Omega-3 rich dietary plans</span>
+                            </div>
+                        </div>
+                        <a href="contact.html" class="btn-sage">Get Started →</a>
+                    </div>
+                </article>
+
+                <!-- Hypertension -->
+                <article class="service-detail" id="hypertension">
+                    <div class="service-detail-header">
+                        <h2 class="service-detail-title">Hypertension Management Diet</h2>
+                    </div>
+                    <div class="service-detail-body">
+                        <p class="service-intro">High blood pressure can be effectively managed through the right nutrition. Our DASH-inspired diet plans help lower blood pressure naturally while ensuring you enjoy delicious, satisfying meals.</p>
+                        <div class="service-features">
+                            <div class="service-feature">
+                                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#7E9B7A" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 12l3 3 5-5"/></svg>
+                                <span>DASH diet principles</span>
+                            </div>
+                            <div class="service-feature">
+                                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#7E9B7A" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 12l3 3 5-5"/></svg>
+                                <span>Potassium-rich food planning</span>
+                            </div>
+                            <div class="service-feature">
+                                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#7E9B7A" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 12l3 3 5-5"/></svg>
+                                <span>Low-sodium meal preparation</span>
+                            </div>
+                            <div class="service-feature">
+                                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#7E9B7A" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 12l3 3 5-5"/></svg>
+                                <span>Stress management guidance</span>
+                            </div>
+                        </div>
+                        <a href="contact.html" class="btn-sage">Get Started →</a>
+                    </div>
+                </article>
+
+                <!-- Detox Diet -->
+                <article class="service-detail" id="detox">
+                    <div class="service-detail-header">
+                        <h2 class="service-detail-title">Detox Diet Program</h2>
+                    </div>
+                    <div class="service-detail-body">
+                        <p class="service-intro">Feeling sluggish or bloated? Our natural detox programs help cleanse your system, boost energy levels, and reset your metabolism — all without any artificial supplements or products.</p>
+                        <div class="service-features">
+                            <div class="service-feature">
+                                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#7E9B7A" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 12l3 3 5-5"/></svg>
+                                <span>Natural detoxification methods</span>
+                            </div>
+                            <div class="service-feature">
+                                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#7E9B7A" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 12l3 3 5-5"/></svg>
+                                <span>Metabolism reset protocols</span>
+                            </div>
+                            <div class="service-feature">
+                                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#7E9B7A" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 12l3 3 5-5"/></svg>
+                                <span>Anti-bloating meal plans</span>
+                            </div>
+                            <div class="service-feature">
+                                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#7E9B7A" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 12l3 3 5-5"/></svg>
+                                <span>Gut health restoration</span>
+                            </div>
+                        </div>
+                        <a href="contact.html" class="btn-sage">Get Started →</a>
+                    </div>
+                </article>
+
+                <!-- Lifestyle Disorder -->
+                <article class="service-detail" id="lifestyle">
+                    <div class="service-detail-header">
+                        <h2 class="service-detail-title">Lifestyle Disorder Management</h2>
+                    </div>
+                    <div class="service-detail-body">
+                        <p class="service-intro">Modern lifestyle disorders — stress, sleep issues, digestive problems, chronic fatigue — can all be managed through the right nutrition and lifestyle modifications. Our holistic programs address root causes.</p>
+                        <div class="service-features">
+                            <div class="service-feature">
+                                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#7E9B7A" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 12l3 3 5-5"/></svg>
+                                <span>Stress-management nutrition</span>
+                            </div>
+                            <div class="service-feature">
+                                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#7E9B7A" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 12l3 3 5-5"/></svg>
+                                <span>Sleep optimization through diet</span>
+                            </div>
+                            <div class="service-feature">
+                                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#7E9B7A" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 12l3 3 5-5"/></svg>
+                                <span>Digestive health improvement</span>
+                            </div>
+                            <div class="service-feature">
+                                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#7E9B7A" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 12l3 3 5-5"/></svg>
+                                <span>Energy & vitality boosting</span>
+                            </div>
+                        </div>
+                        <a href="contact.html" class="btn-sage">Get Started →</a>
+                    </div>
+                </article>
+
+                <!-- Kids & Toddler -->
+                <article class="service-detail" id="kids">
+                    <div class="service-detail-header">
+                        <h2 class="service-detail-title">Kids & Toddler Diet</h2>
+                    </div>
+                    <div class="service-detail-body">
+                        <p class="service-intro">Growing children need the right nutrition for optimal development. Our pediatric diet programs ensure your child gets all essential nutrients through fun, appealing meals they'll actually enjoy eating.</p>
+                        <h3>Age-Appropriate Nutrition</h3>
+                        <p>From toddlers to teenagers, nutritional needs vary drastically. We create age-specific meal plans that support growth, brain development, immune function, and overall health — while keeping picky eaters happy!</p>
+                        <div class="service-features">
+                            <div class="service-feature">
+                                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#7E9B7A" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 12l3 3 5-5"/></svg>
+                                <span>Age-customized meal plans</span>
+                            </div>
+                            <div class="service-feature">
+                                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#7E9B7A" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 12l3 3 5-5"/></svg>
+                                <span>Growth & development nutrition</span>
+                            </div>
+                            <div class="service-feature">
+                                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#7E9B7A" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 12l3 3 5-5"/></svg>
+                                <span>Picky-eater friendly recipes</span>
+                            </div>
+                            <div class="service-feature">
+                                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#7E9B7A" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 12l3 3 5-5"/></svg>
+                                <span>Immune-boosting foods</span>
+                            </div>
+                        </div>
+                        <a href="contact.html" class="btn-sage">Get Started →</a>
+                    </div>
+                </article>
+
+                <!-- Pregnancy / ANC -->
+                <article class="service-detail" id="pregnancy">
+                    <div class="service-detail-header">
+                        <h2 class="service-detail-title">Pregnancy / ANC Plans</h2>
+                        <div class="service-badge">Specialized</div>
+                    </div>
+                    <div class="service-detail-body">
+                        <p class="service-intro">Proper nutrition during pregnancy is critical for both mother and baby. Our Ante-natal Care (ANC) diet plans ensure optimal nutrient intake at every trimester, supporting healthy fetal development and maternal well-being.</p>
+                        <h3>Trimester-Specific Nutrition</h3>
+                        <p>Each trimester has different nutritional requirements. We adjust iron, calcium, folic acid, protein, and DHA intake according to each stage of pregnancy to support healthy development and manage common pregnancy concerns like nausea and gestational diabetes.</p>
+                        <div class="service-features">
+                            <div class="service-feature">
+                                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#7E9B7A" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 12l3 3 5-5"/></svg>
+                                <span>Trimester-specific meal plans</span>
+                            </div>
+                            <div class="service-feature">
+                                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#7E9B7A" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 12l3 3 5-5"/></svg>
+                                <span>Iron & calcium optimization</span>
+                            </div>
+                            <div class="service-feature">
+                                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#7E9B7A" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 12l3 3 5-5"/></svg>
+                                <span>Gestational diabetes management</span>
+                            </div>
+                            <div class="service-feature">
+                                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#7E9B7A" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 12l3 3 5-5"/></svg>
+                                <span>Post-delivery recovery nutrition</span>
+                            </div>
+                        </div>
+                        <a href="contact.html" class="btn-sage">Get Started →</a>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- ======================== CTA SECTION ======================== -->
+<section class="cta-section" id="cta">
+    <div class="cta-bg-shape cta-shape-1"></div>
+    <div class="cta-bg-shape cta-shape-2"></div>
+    <div class="container cta-inner">
+        <h2 class="cta-heading">Ready to take charge of your health?</h2>
+        <p class="cta-sub">Connect with Dr. Prerna for a personalized diet consultation. Start your journey towards a healthier, more vibrant life today.</p>
+        <a href="contact.html" class="cta-btn">Book Your Consultation →</a>
+    </div>
+</section>
+
+
+<!-- ======================== FOOTER ======================== -->
+<footer class="site-footer" id="footer">
+    <div class="container footer-grid">
+        <div class="footer-col footer-brand">
+            <h3 class="footer-brand-name">Dr. Prerna Golekar Gopale</h3>
+            <p class="footer-brand-desc">BAMS PGDEMS | Diploma in Clinical Nutritionist. 12+ years helping people achieve lasting health through holistic, evidence-based nutrition.</p>
+            <div class="footer-socials">
+                <a href="https://www.instagram.com/" target="_blank" class="social-circle" aria-label="Instagram">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="white"><rect x="2" y="2" width="20" height="20" rx="5" fill="none" stroke="white" stroke-width="2"/><circle cx="12" cy="12" r="5" fill="none" stroke="white" stroke-width="2"/><circle cx="17.5" cy="6.5" r="1.5" fill="white"/></svg>
+                </a>
+                <a href="https://wa.me/918552044073" target="_blank" class="social-circle" aria-label="WhatsApp">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                </a>
+                <a href="tel:+918552044073" class="social-circle" aria-label="Call">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="white" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.12.96.36 1.9.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.91.34 1.85.58 2.81.7A2 2 0 0122 16.92z"/></svg>
+                </a>
+            </div>
+        </div>
+        <div class="footer-col">
+            <h4 class="footer-col-title">QUICK LINKS</h4>
+            <ul class="footer-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="services.html">Our Services</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4 class="footer-col-title">DIET PROGRAMS</h4>
+            <ul class="footer-links">
+                <li><a href="services.html#weight-loss">Weight Loss / Gain</a></li>
+                <li><a href="services.html#pcod-thyroid">PCOD & Thyroid</a></li>
+                <li><a href="services.html#diabetes">Diabetes Reversal</a></li>
+                <li><a href="services.html#pregnancy">Pregnancy / ANC</a></li>
+                <li><a href="services.html#kids">Kids & Toddler</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4 class="footer-col-title">CONTACT</h4>
+            <div class="footer-contact">
+                <p><strong>Dr. Prerna Golekar Gopale</strong><br>Clinical Nutritionist & Dietician</p>
+                <p><a href="tel:+918552044073">+91 85520 44073</a></p>
+                <p>Payment: GPay, PhonePe, Paytm, Bank Transfer</p>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <div class="container footer-bottom-inner">
+            <span>&copy; 2026 Dr. Prerna Golekar Gopale. All rights reserved.</span>
+            <a href="#">Privacy Policy</a>
+        </div>
+    </div>
+</footer>
+
+<div class="floating-contact-buttons" id="floating-contact-buttons">
+    <a href="tel:+918857066841" class="fab-btn fab-call" aria-label="Call">
+        <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.12.96.36 1.9.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.91.34 1.85.58 2.81.7A2 2 0 0122 16.92z"/></svg>
+    </a>
+    <a href="https://www.youtube.com/" target="_blank" class="fab-btn fab-youtube" aria-label="YouTube">
+        <svg viewBox="0 0 24 24" width="24" height="24" fill="none" aria-hidden="true"><rect x="3" y="6" width="18" height="12" rx="4" fill="#fff"/><path d="M11 9.6L16 12L11 14.4V9.6z" fill="#FF2A23"/></svg>
+    </a>
+    <a href="https://www.instagram.com/" target="_blank" class="fab-btn fab-instagram" aria-label="Instagram">
+        <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg>
+    </a>
+    <a href="https://wa.me/918857066841" target="_blank" class="fab-btn fab-whatsapp" aria-label="WhatsApp">
+        <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    </a>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
