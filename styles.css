@@ -446,6 +446,7 @@ img { display: block; max-width: 100%; height: auto; }
     .contact-pill-btn,
     .filter-btn {
         -webkit-tap-highlight-color: rgba(110,127,115,0.18);
+        touch-action: manipulation;
     }
 
     .mobile-cta.touch-active,

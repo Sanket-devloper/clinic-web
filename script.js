@@ -44,9 +44,10 @@ document.addEventListener('DOMContentLoaded', () => {
             const addGlow = () => btn.classList.add('touch-glow');
             const removeGlow = () => btn.classList.remove('touch-glow');
 
-            btn.addEventListener('touchstart', addGlow, { passive: true });
-            btn.addEventListener('touchend', removeGlow, { passive: true });
-            btn.addEventListener('touchcancel', removeGlow, { passive: true });
+            btn.addEventListener('pointerdown', addGlow);
+            btn.addEventListener('pointerup', removeGlow);
+            btn.addEventListener('pointercancel', removeGlow);
+            btn.addEventListener('pointerleave', removeGlow);
         });
     }
 
@@ -61,13 +62,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
         touchFeedbackTargets.forEach((el) => {
             const addTouchActive = () => el.classList.add('touch-active');
-            const removeTouchActive = () => {
-                setTimeout(() => el.classList.remove('touch-active'), 120);
-            };
+            const removeTouchActive = () => el.classList.remove('touch-active');
 
-            el.addEventListener('touchstart', addTouchActive, { passive: true });
-            el.addEventListener('touchend', removeTouchActive, { passive: true });
-            el.addEventListener('touchcancel', removeTouchActive, { passive: true });
+            el.addEventListener('pointerdown', addTouchActive);
+            el.addEventListener('pointerup', removeTouchActive);
+            el.addEventListener('pointercancel', removeTouchActive);
+            el.addEventListener('pointerleave', removeTouchActive);
         });
     }
 
