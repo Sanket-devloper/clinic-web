@@ -35,6 +35,23 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     // =============================================
+    // Hero Social Buttons Touch Glow (Mobile)
+    // =============================================
+    const heroSocialButtons = document.querySelectorAll('.hero-social-btn');
+    const isTouchViewport = window.matchMedia('(hover: none) and (pointer: coarse)').matches;
+    if (heroSocialButtons.length && isTouchViewport) {
+        heroSocialButtons.forEach((btn) => {
+            const addGlow = () => btn.classList.add('touch-glow');
+            const removeGlow = () => btn.classList.remove('touch-glow');
+
+            btn.addEventListener('touchstart', addGlow, { passive: true });
+            btn.addEventListener('touchend', removeGlow, { passive: true });
+            btn.addEventListener('touchcancel', removeGlow, { passive: true });
+        });
+    }
+
+
+    // =============================================
     // Home Programs Mobile Auto-Slider
     // =============================================
     const homeProgramsGrid = document.querySelector('#programs .programs-grid');

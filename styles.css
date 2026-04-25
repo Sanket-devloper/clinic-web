@@ -198,11 +198,20 @@ img { display: block; max-width: 100%; height: auto; }
     position: absolute;
     inset: -20px;
     background:
-        linear-gradient(180deg, rgba(248,245,241,0.82) 0%, rgba(247,236,238,0.78) 100%),
+        linear-gradient(180deg, rgba(248,245,241,0.42) 0%, rgba(215,184,190,0.34) 100%),
         url("images/herosection-bg-image.png") center/cover no-repeat;
-    filter: blur(6px);
+    filter: blur(4px) saturate(1.08);
     transform: scale(1.04);
     z-index: 0;
+}
+
+.hero-section::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 50% 15%, rgba(255,255,255,0.24) 0%, rgba(255,255,255,0.08) 42%, rgba(63,71,65,0.14) 100%);
+    z-index: 0;
+    pointer-events: none;
 }
 .hero-container {
     max-width: 1280px;
@@ -220,6 +229,13 @@ img { display: block; max-width: 100%; height: auto; }
     justify-content: center;
     gap: 34px;
     margin-bottom: 40px;
+    padding: 26px 32px;
+    border-radius: 28px;
+    background: linear-gradient(135deg, rgba(248,245,241,0.36), rgba(255,255,255,0.2));
+    border: 1px solid rgba(255,255,255,0.45);
+    box-shadow: 0 18px 36px rgba(63,71,65,0.15), inset 0 1px 0 rgba(255,255,255,0.4);
+    backdrop-filter: blur(10px) saturate(1.15);
+    -webkit-backdrop-filter: blur(10px) saturate(1.15);
 }
 
 .hero-social-btn {
@@ -284,6 +300,39 @@ img { display: block; max-width: 100%; height: auto; }
         0 0 40px rgba(18, 184, 98, 0.7);
 }
 
+.hero-ig-btn.touch-glow {
+    transform: translateY(-2px) scale(1.1);
+    box-shadow:
+        0 0 0 2px rgba(255,255,255,0.35),
+        0 0 18px rgba(240, 132, 58, 0.95),
+        0 0 34px rgba(220, 39, 67, 0.75),
+        0 0 52px rgba(188, 24, 136, 0.55),
+        0 10px 24px rgba(0,0,0,0.18);
+    filter: saturate(1.15) brightness(1.08);
+}
+
+.hero-wa-btn.touch-glow {
+    transform: translateY(-2px) scale(1.1);
+    box-shadow:
+        0 0 0 2px rgba(255,255,255,0.28),
+        0 0 18px rgba(37, 211, 102, 0.95),
+        0 0 34px rgba(18, 184, 98, 0.72),
+        0 0 52px rgba(6, 182, 108, 0.5),
+        0 10px 24px rgba(0,0,0,0.18);
+    filter: saturate(1.15) brightness(1.08);
+}
+
+@media (hover: none) and (pointer: coarse) {
+    .hero-social-btn {
+        animation-duration: 3.8s;
+    }
+
+    .hero-ig-btn:active,
+    .hero-wa-btn:active {
+        transform: translateY(-2px) scale(1.1);
+    }
+}
+
 @keyframes heroSocialFloat {
     0%, 100% { transform: translateY(0); }
     50% { transform: translateY(-4px); }
@@ -296,6 +345,7 @@ img { display: block; max-width: 100%; height: auto; }
     color: var(--dark-text);
     line-height: 1.2;
     max-width: 780px;
+    text-shadow: 0 1px 0 rgba(255,255,255,0.3);
 }
 
 /* COLLAGE — 7 images now */
@@ -379,6 +429,40 @@ img { display: block; max-width: 100%; height: auto; }
 }
 .fade-in-up { opacity: 0; animation: fadeInUp 0.8s ease forwards; }
 .fade-in-up:nth-child(2) { animation-delay: 0.3s; }
+
+/* Mobile touch feedback for button-like controls */
+@media (hover: none) and (pointer: coarse) {
+    .nav-cta,
+    .hero-cta-btn,
+    .btn-sage,
+    .cta-btn,
+    .form-submit,
+    .clinic-action-btn,
+    .contact-pill-btn,
+    .filter-btn,
+    .map-directions-btn,
+    .card-cta,
+    .review-read-more {
+        -webkit-tap-highlight-color: rgba(110,127,115,0.18);
+    }
+
+    .nav-cta:active,
+    .hero-cta-btn:active,
+    .btn-sage:active,
+    .cta-btn:active,
+    .form-submit:active,
+    .clinic-action-btn:active,
+    .contact-pill-btn:active,
+    .filter-btn:active,
+    .map-directions-btn:active,
+    .card-cta:active,
+    .review-read-more:active {
+        background: var(--sage) !important;
+        border-color: var(--sage) !important;
+        color: #fff !important;
+        transform: scale(0.98);
+    }
+}
 
 
 /* =============================================
@@ -1670,6 +1754,10 @@ img { display: block; max-width: 100%; height: auto; }
     .hero-section { padding: 30px 0 40px; }
     .hero-container { padding: 0 16px; }
     .hero-heading-row { gap: 20px; margin-bottom: 24px; }
+    .hero-heading-row {
+        padding: 16px 14px;
+        border-radius: 18px;
+    }
     .hero-social-btn { width: 50px; height: 50px; }
     .hero-social-btn svg { width: 20px; height: 20px; }
     .hero-heading { font-size: 24px; }
