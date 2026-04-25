@@ -52,6 +52,27 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     // =============================================
+    // Mobile Touch Feedback for CTA Buttons
+    // =============================================
+    if (isTouchViewport) {
+        const touchFeedbackTargets = document.querySelectorAll(
+            '.mobile-cta, .hero-cta-btn, .btn-sage, .cta-btn, .form-submit, .clinic-action-btn, .contact-pill-btn, .filter-btn'
+        );
+
+        touchFeedbackTargets.forEach((el) => {
+            const addTouchActive = () => el.classList.add('touch-active');
+            const removeTouchActive = () => {
+                setTimeout(() => el.classList.remove('touch-active'), 120);
+            };
+
+            el.addEventListener('touchstart', addTouchActive, { passive: true });
+            el.addEventListener('touchend', removeTouchActive, { passive: true });
+            el.addEventListener('touchcancel', removeTouchActive, { passive: true });
+        });
+    }
+
+
+    // =============================================
     // Home Programs Mobile Auto-Slider
     // =============================================
     const homeProgramsGrid = document.querySelector('#programs .programs-grid');
